@@ -1,22 +1,179 @@
-body {
-    background-color: burlywood;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --bg-color: #FDF6E3; 
+    --primary-text-color: #3C3C3C ;
+    --accent-color: #b38600;
+    --link-color: #268BD2;
+    --neutral-elements: #E2DED3;
+    --regular-font-size: 1.5rem;
+    --medium-font-size: 2rem;
 }
 
-h6 {
-    font-size: 16px;
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color); 
+    color: var(--primary-text-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--regular-font-size);
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
-    font-size: 20px; 
+    padding: 1rem 2.5rem;
+    background-color: var(--neutral-elements);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-a {
-    padding: 15px;
+nav h1 {
+    font-size: var(--medium-font-size);
+    color: var(--accent-color);
+}
+
+nav .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: var(--medium-font-size);
+    font-weight: 600;
+    color: var(--primary-text-color);
+    transition: 0.19s all ease-in-out;
+}
+
+.links a:hover {
+    color: var(--link-color);
 }
 
 img {
-    width: 300px;
-    object-fit: cover;
+    width: 600px;
+    border-radius: 8px;
+}
+
+main {
+    padding: 2.5rem;
+}
+
+section {
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+.introduction img {
+    float: left;
+    margin-right: 35px;
+}
+
+.friends li {
+    list-style-type: circle;
+}
+
+.freeCodeCamp {
+    clear: both;
+}
+
+.freeCodeCamp img {
+    float: right;
+    margin-left: 20px;
+}
+
+.hosting {
+    clear: both;
+}
+
+.hosting img {
+    float: left;
+    margin-right: 20px;
+}
+
+.struggles {
+    clear: both;
+}
+
+.struggles img {
+    margin-left: 20px;
+    float: right;
+}
+
+.lectures {
+    clear: both;
+}
+
+.lectures img {
+    float: left;
+    margin-right: 20px;
+}
+
+h6 {
+    clear: both;
+    margin-top: 80px;
+    font-size: var(--regular-font-size);
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.heading {
+    margin-top: 30px; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center; 
+    justify-content: center;
+}
+
+@media  screen and (max-width: 830px) {
+    nav {
+        display: initial;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav .links {
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    img {
+        width: 350px;
+    }
+
+    section img {
+        margin: 10px 0;
+    }
+
+    .freeCodeCamp img, .struggles img {
+        margin: 10px;
+    }
+
+    h6 {
+        margin-top: 45px;
+    }
+
 }
